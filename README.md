@@ -81,7 +81,9 @@ No providers.
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_interconnect_vpc"></a> [interconnect\_vpc](#module\_interconnect\_vpc) | terraform-google-modules/network/google//modules/vpc | 5.1.0 |
 
 ## Resources
 
@@ -91,6 +93,11 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_interconnect_vpc_delete_default_igw"></a> [interconnect\_vpc\_delete\_default\_igw](#input\_interconnect\_vpc\_delete\_default\_igw) | Interconnect 용 VPC 내 default IGW와 Route 삭제 여부 | `bool` | n/a | yes |
+| <a name="input_interconnect_vpc_description"></a> [interconnect\_vpc\_description](#input\_interconnect\_vpc\_description) | Interconnect 용 VPC 설명 | `string` | n/a | yes |
+| <a name="input_interconnect_vpc_mtu"></a> [interconnect\_vpc\_mtu](#input\_interconnect\_vpc\_mtu) | Interconnect 용 VPC MTU | `number` | n/a | yes |
+| <a name="input_interconnect_vpc_name"></a> [interconnect\_vpc\_name](#input\_interconnect\_vpc\_name) | Interconnect 용 VPC Name | `string` | n/a | yes |
+| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Project ID | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | GCP Region | `string` | n/a | yes |
 
 ## Outputs
