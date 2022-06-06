@@ -23,6 +23,11 @@ variable "vpc_mtu" {
   type        = number
 }
 
+variable "subnets" {
+  description = "Subnet 목록"
+  type        = list(any)
+}
+
 /*
 별도의 Repository로 이전예정
 variable "interconnect_vpc_name" {

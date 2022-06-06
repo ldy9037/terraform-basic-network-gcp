@@ -83,7 +83,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-google-modules/network/google//modules/vpc | 5.1.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-google-modules/network/google | 5.1.0 |
 
 ## Resources
 
@@ -95,6 +95,7 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Project ID | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | GCP Region | `string` | n/a | yes |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | Subnet 목록 | `list(any)` | n/a | yes |
 | <a name="input_vpc_description"></a> [vpc\_description](#input\_vpc\_description) | VPC 설명 | `string` | n/a | yes |
 | <a name="input_vpc_mtu"></a> [vpc\_mtu](#input\_vpc\_mtu) | VPC MTU | `number` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | VPC Name | `string` | n/a | yes |

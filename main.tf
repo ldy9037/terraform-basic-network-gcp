@@ -16,13 +16,15 @@ provider "google" {
 }
 
 module "vpc" {
-  source  = "terraform-google-modules/network/google//modules/vpc"
+  source  = "terraform-google-modules/network/google"
   version = "5.1.0"
 
   project_id   = var.project_id
   network_name = var.vpc_name
   description  = var.vpc_description
   mtu          = var.vpc_mtu
+
+  subnets = var.subnets
 }
 
 /*
