@@ -12,9 +12,13 @@ terraform {
 }
 
 provider "google" {
-  region = var.region
+  region  = var.region
+  project = var.project_id
 }
 
+
+
+/*
 module "interconnect_vpc" {
   source  = "terraform-google-modules/network/google//modules/vpc"
   version = "5.1.0"
@@ -26,3 +30,4 @@ module "interconnect_vpc" {
 
   delete_default_internet_gateway_routes = var.interconnect_vpc_delete_default_igw
 }
+*/

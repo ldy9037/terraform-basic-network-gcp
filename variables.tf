@@ -8,6 +8,8 @@ variable "project_id" {
   type        = string
 }
 
+/*
+별도의 Repository로 이전예정
 variable "interconnect_vpc_name" {
   description = "Interconnect 용 VPC Name"
   type        = string
@@ -27,3 +29,4 @@ variable "interconnect_vpc_delete_default_igw" {
   description = "Interconnect 용 VPC 내 default IGW와 Route 삭제 여부"
   type        = bool
 }
+*/
