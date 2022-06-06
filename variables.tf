@@ -8,6 +8,21 @@ variable "project_id" {
   type        = string
 }
 
+variable "vpc_name" {
+  description = "VPC Name"
+  type        = string
+}
+
+variable "vpc_description" {
+  description = "VPC 설명"
+  type        = string
+}
+
+variable "vpc_mtu" {
+  description = "VPC MTU"
+  type        = number
+}
+
 /*
 별도의 Repository로 이전예정
 variable "interconnect_vpc_name" {

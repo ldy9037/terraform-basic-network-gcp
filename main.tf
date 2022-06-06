@@ -12,13 +12,21 @@ terraform {
 }
 
 provider "google" {
-  region  = var.region
-  project = var.project_id
+  region = var.region
 }
 
+module "vpc" {
+  source  = "terraform-google-modules/network/google//modules/vpc"
+  version = "5.1.0"
 
+  project_id   = var.project_id
+  network_name = var.vpc_name
+  description  = var.vpc_description
+  mtu          = var.vpc_mtu
+}
 
 /*
+별도의 Repository로 이전예정
 module "interconnect_vpc" {
   source  = "terraform-google-modules/network/google//modules/vpc"
   version = "5.1.0"
