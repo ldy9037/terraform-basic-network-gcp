@@ -20,12 +20,28 @@ module "vpc" {
   version = "5.1.0"
 
   project_id   = var.project_id
-  network_name = var.vpc_name
+  network_name = "${terraform.workspace}-${var.vpc_name}"
   description  = var.vpc_description
   mtu          = var.vpc_mtu
 
-  subnets = var.subnets
+  subnets = [
+    for s in var.subnets :
+    {
+      subnet_name                  = "${terraform.workspace}-${s.subnet_name}"
+      subnet_ip                    = s.subnet_ip
+      subnet_region                = var.region
+      subnet_private_access        = s.subnet_private_access
+      subnet_flow_logs             = s.subnet_flow_logs
+      subnet_flow_logs_interval    = s.subnet_flow_logs_interval
+      subnet_flow_logs_sampling    = s.subnet_flow_logs_sampling
+      subnet_flow_logs_metadata    = s.subnet_flow_logs_metadata
+      subnet_flow_logs_filter_expr = s.subnet_flow_logs_filter_expr
+      description                  = s.description
+    }
+  ]
 }
+
+
 
 /*
 별도의 Repository로 이전예정
